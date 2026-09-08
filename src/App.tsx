@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
-import { misc, notes } from './data/content'
+import { misc } from './data/misc'
+import { notes } from './data/notes'
 import EntryPage from './pages/EntryPage'
 import ExperiencePage from './pages/ExperiencePage'
 import Home from './pages/Home'

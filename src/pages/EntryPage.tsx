@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import type { Entry } from '../data/content'
+import type { Entry } from '../data/types'
 
 export default function EntryPage({ entries, basePath }: { entries: Entry[]; basePath: string }) {
   const { slug } = useParams(); const entry = entries.find(item => item.slug === slug)

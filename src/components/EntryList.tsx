@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import type { Entry } from '../data/content'
+import type { Entry } from '../data/types'
 
 export default function EntryList({ entries, basePath }: { entries: Entry[]; basePath: string }) {
   return <div className="divide-y divide-neutral-200 border-y border-neutral-200 dark:divide-neutral-800 dark:border-neutral-800">

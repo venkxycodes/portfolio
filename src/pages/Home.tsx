@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
-import { experiences, notes, siteContent } from '../data/content'
+import { experiences } from '../data/experiences'
+import { notes } from '../data/notes'
+import { siteContent } from '../data/site'
 import Section from '../components/Section'
 
 export default function Home() {

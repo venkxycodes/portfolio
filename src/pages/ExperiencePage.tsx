@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { experiences } from '../data/content'
+import { experiences } from '../data/experiences'
 
 export default function ExperiencePage() {
   const { slug } = useParams()

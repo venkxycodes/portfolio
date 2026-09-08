@@ -11,4 +11,4 @@ yarn dev
 
 Build for production with `yarn build`.
 
-All editable content lives in `src/data/content.ts`; add notes, journal entries, projects, experience bullets, or update the home-page copy there without editing the UI components.
+Editable content is separated by page in `src/data/`: update `site.ts`, `experiences.ts`, `notes.ts`, `misc.ts`, or `projects.ts` without editing the UI components.
