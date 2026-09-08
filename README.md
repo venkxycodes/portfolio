@@ -1,6 +1,6 @@
 # venkxyslittleworld-
 
-Venkat's personal knowledge garden: notes, projects, and small observations.
+Venkat's personal website: notes, projects, and small observations.
 
 ## Run locally
 
