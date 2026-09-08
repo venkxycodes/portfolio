@@ -13,5 +13,4 @@ export const misc: Entry[] = [
     'The only way I currently see it working is through clear boundaries. For example, 9 AM to 6 PM can be uninterrupted work time. Full focus. Build and ship. Mornings and evenings can belong to you - your health, fitness, sport, family, or whatever else matters to you.',
     'Sleep well. Eat well. Work hard. Play a sport. Spend time with people you care about. After all, we are humans. As I write this, and as you read this, a few more minutes of our lives are already gone. It is a chaotic time to work in tech. But I am slowly becoming convinced that setting boundaries and caring about other parts of your life does not necessarily make you less ambitious. Maybe ambition does not have to mean giving one thing everything you have, unless you think that is the only thing in life that matters; certainly not for me.',
   ] },
-  { slug: 'a-good-walk', title: 'A good walk', description: 'Some problems only need an hour without a screen.', date: '08 Sept 2026', body: ['I am trying to remember that thinking is also an activity. A walk with no podcast is sometimes the fastest way to find the shape of a problem.'] },
 ]
