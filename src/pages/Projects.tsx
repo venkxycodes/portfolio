@@ -1,0 +1,4 @@
+import { projects } from '../data/content'
+import Section from '../components/Section'
+
+export default function Projects() { return <div className="pt-16 sm:pt-24"><p className="text-sm text-neutral-500">Things I’ve made</p><h1 className="mt-3 text-3xl font-semibold tracking-tight">Projects</h1><Section title="Selected work"><div className="divide-y divide-neutral-200 border-y border-neutral-200 dark:divide-neutral-800 dark:border-neutral-800">{projects.map(project => <a key={project.name} href={project.url} target="_blank" rel="noreferrer" className="block py-5"><div className="flex items-baseline justify-between gap-4"><h2 className="font-medium">{project.name} ↗</h2><span className="text-xs text-neutral-500">{project.stack}</span></div><p className="mt-1 text-sm text-neutral-500">{project.description}</p></a>)}</div></Section></div> }
