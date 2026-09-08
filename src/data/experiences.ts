@@ -40,7 +40,7 @@ export const experiences: Experience[] = [
   {
     slug: 'appsforbharat-intern', company: 'AppsForBharat', role: 'Software Engineering Intern', dates: 'January 2023 - April 2023', location: 'Bengaluru, India',
     stack: 'Go, MongoDB',
-    highlight: 'Built Go microservices for event property aggregation',
+    highlight: 'Built a Golang based backend service for event property aggregation',
     bullets: [
       'Built an event property aggregator service in Go to provide centralized access to event properties across microservices, simplifying data access across the platform.',
       'Developed a reminder feature for festive task management, implementing backend workflows and data persistence using Go and MongoDB.',
