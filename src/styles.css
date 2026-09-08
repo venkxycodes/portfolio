@@ -13,4 +13,13 @@ button { color: inherit; font: inherit; }
 .dark ::selection { color: #111; background: #f5f5f0; }
 .prose p { margin: 0 0 1.25rem; line-height: 1.8; }
 .prose h2 { margin: 2.5rem 0 1rem; font-size: 1.1rem; font-weight: 600; }
-.prose code { font-size: .9em; }
+.prose ul { margin: 0 0 1.25rem; padding-left: 1.25rem; line-height: 1.8; list-style: disc; }
+.prose li { margin: 0.35rem 0; }
+.prose blockquote { margin: 0 0 1.25rem; padding-left: 1rem; border-left: 2px solid #d4d4d4; color: #525252; }
+.prose blockquote p { margin: 0 0 0.75rem; }
+.prose blockquote p:last-child { margin-bottom: 0; }
+.dark .prose blockquote { border-left-color: #525252; color: #a3a3a3; }
+.prose strong { font-weight: 600; color: inherit; }
+.prose em { font-style: italic; }
+.prose code { font-size: .9em; padding: 0.1em 0.35em; border-radius: 0.25rem; background: #f5f5f5; }
+.dark .prose code { background: #262626; }
