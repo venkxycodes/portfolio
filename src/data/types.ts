@@ -7,6 +7,6 @@ export type Experience = {
   dates: string
   location: string
   stack: string
-  highlights: string[]
+  highlight: string
   bullets: string[]
 }

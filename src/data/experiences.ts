@@ -4,7 +4,7 @@ export const experiences: Experience[] = [
   {
     slug: 'lassie-ai', company: 'Lassie AI', role: 'Software Engineer', dates: 'December 2025 - Present', location: 'San Francisco, CA (Remote)',
     stack: 'Python, Django, Pydantic AI, PostgreSQL, Redis, GCP',
-    highlights: ['Reduced PMS synchronization time from 2 hours to 6-10 minutes with fingerprint-based incremental sync.', 'Improved long-tail patient and claim matching from 91% to 98%.', 'Reduced Cloud Run infrastructure costs by $2,000 per month while maintaining performance.'],
+    highlight: 'Built PMS sync and AI insurance payment posting workflows, cutting sync time from 2 hours to minutes and improving claim matching to 98%.',
     bullets: [
       'Built and maintained the PMS sync ecosystem to fetch and synchronize patient and insurance data from on-premise Windows servers into Lassie\'s GCP infrastructure, enabling reliable data availability for downstream AI and application workflows.',
       'Introduced fingerprint-based incremental synchronization to efficiently detect updates and deletes from on-premise PMS servers, reducing end-to-end synchronization time from 2 hours to 6-10 minutes.',
@@ -22,7 +22,7 @@ export const experiences: Experience[] = [
   {
     slug: 'appsforbharat-software-engineer', company: 'AppsForBharat', role: 'Software Engineer - Backend', dates: 'May 2023 - November 2025', location: 'Bengaluru, India',
     stack: 'Go, PostgreSQL, MongoDB, Redis, AWS, GCP BigQuery, Bitbucket CI/CD',
-    highlights: ['Improved analytics funnel completion from 10% to 77% through better website tracking and guest-user identification.', 'Increased customer support feedback rates from 38% to 79% with an end-to-end WhatsApp rating workflow.', 'Reduced AWS infrastructure costs by $1,500 per month through ECS workload and resource optimization.'],
+    highlight: 'Built a real-time event delivery pipeline and batch pipelines to enrich user data into CRM systems and improve customer retention.',
     bullets: [
       'Built and maintained Go microservices for event capture and data ingestion, enabling low-latency and reliable processing of application events across distributed systems.',
       'Led the development of a real-time event verification system to validate incoming event data against defined requirements and automate ticket generation for invalid or incomplete instrumentation.',
@@ -40,7 +40,7 @@ export const experiences: Experience[] = [
   {
     slug: 'appsforbharat-intern', company: 'AppsForBharat', role: 'Software Engineering Intern', dates: 'January 2023 - April 2023', location: 'Bengaluru, India',
     stack: 'Go, MongoDB',
-    highlights: ['Built an event property aggregator service in Go for centralized access across microservices.', 'Developed a festive task reminder feature with Go and MongoDB.'],
+    highlight: 'Built Go microservices for event property aggregation',
     bullets: [
       'Built an event property aggregator service in Go to provide centralized access to event properties across microservices, simplifying data access across the platform.',
       'Developed a reminder feature for festive task management, implementing backend workflows and data persistence using Go and MongoDB.',
