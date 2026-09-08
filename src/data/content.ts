@@ -12,7 +12,7 @@ export type Experience = {
 }
 
 export const siteContent = {
-  name: 'Venkat',
+  name: 'Venkatraman Kannan',
   introduction: 'I build things, write things down, and try to pay attention to the space between the two.',
   currently: 'Currently thinking about search, useful software, and learning in public.',
   homeNote: 'I work on software and enjoy the parts that require care: understanding a problem, making a small useful thing, and leaving it clearer than I found it.',
