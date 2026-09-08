@@ -13,13 +13,13 @@ export type Experience = {
 
 export const siteContent = {
   name: 'Venkatraman Kannan',
-  introduction: 'I build things, write things down, and try to pay attention to the space between the two.',
-  currently: 'Currently thinking about search, useful software, and learning in public.',
-  homeNote: 'I work on software and enjoy the parts that require care: understanding a problem, making a small useful thing, and leaving it clearer than I found it.',
+  introduction: 'Always curious, trying to build things that help people.',
+  currently: 'Currently doing nothing!!',
+  homeNote: 'I work on software. My approach towards building software is: understanding a problem, making a small useful thing, and leaving it clearer than I found it.',
   links: {
     github: 'https://github.com/venkxycodes',
-    linkedin: 'https://www.linkedin.com',
-    email: 'mailto:hello@venkat.dev',
+    linkedin: 'https://www.linkedin.com/in/venkxy30',
+    email: 'mailto:venkatramankannantech@gmail.com',
   },
 }
 
