@@ -1,0 +1,9 @@
+import { Link, useParams } from 'react-router-dom'
+import { experiences } from '../data/content'
+
+export default function ExperiencePage() {
+  const { slug } = useParams()
+  const experience = experiences.find(item => item.slug === slug)
+  if (!experience) return <div className="pt-24"><h1 className="text-2xl font-semibold">Experience not found.</h1><Link className="mt-4 inline-block text-sm underline" to="/work">Back to work experience</Link></div>
+  return <article className="pt-16 sm:pt-24"><Link to="/work" className="text-sm text-neutral-500">← Back to work experience</Link><div className="mt-10 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between"><h1 className="text-3xl font-semibold tracking-tight">{experience.company}</h1><time className="text-sm text-neutral-500">{experience.dates}</time></div><p className="mt-2 text-sm text-neutral-500">{experience.role} · {experience.location}</p><p className="mt-8 max-w-xl border-l-2 border-neutral-300 pl-4 text-sm leading-7 text-neutral-600 dark:border-neutral-700 dark:text-neutral-300">{experience.highlights.join(' ')}</p><div className="mt-12 max-w-2xl"><h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500">What I worked on</h2><ul className="mt-5 list-inside list-disc space-y-4 text-sm leading-7 text-neutral-700 dark:text-neutral-300">{experience.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul><p className="mt-10 border-t border-neutral-200 pt-5 text-xs text-neutral-500 dark:border-neutral-800">Stack: {experience.stack}</p></div></article>
+}

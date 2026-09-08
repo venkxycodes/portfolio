@@ -1,7 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 
-const links = [['/notes', 'Notes'], ['/projects', 'Projects'], ['/misc', 'Misc'], ['/about', 'About']]
+const links = [['/notes', 'Notes'], ['/work', 'Work'], ['/projects', 'Projects'], ['/misc', 'Misc']]
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [dark, setDark] = useState(() => {
@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Link to="/" className="font-semibold tracking-tight">Venkat</Link>
       <nav className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400 sm:gap-6">
         {links.map(([to, label]) => <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'text-neutral-950 dark:text-white' : 'hover:text-neutral-950 dark:hover:text-white'}>{label}</NavLink>)}
-        <button aria-label="Toggle color theme" onClick={() => setDark(!dark)} className="ml-1 border border-neutral-300 px-2 py-1 text-xs dark:border-neutral-700">{dark ? 'light' : 'dark'}</button>
+        <button aria-label="Toggle color theme" onClick={() => setDark(!dark)} className="ml-1 px-1 text-base leading-none" title="Toggle theme">🌙</button>
       </nav>
     </header>
     <main className="mx-auto max-w-3xl px-6 pb-24 sm:px-8">{children}</main>
