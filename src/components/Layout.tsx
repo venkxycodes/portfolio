@@ -23,6 +23,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </nav>
     </header>
     <main className="mx-auto max-w-3xl px-6 pb-24 sm:px-8">{children}</main>
-    <footer className="mx-auto flex max-w-3xl justify-between border-t border-neutral-200 px-6 py-7 text-xs text-neutral-500 dark:border-neutral-800 sm:px-8"><span>Built slowly.</span><span>© {new Date().getFullYear()} Venkat</span></footer>
+    <footer className="mx-auto flex max-w-3xl justify-between border-t border-neutral-200 px-6 py-7 text-xs text-neutral-500 dark:border-neutral-800 sm:px-8"><span>You made it to the bottom.</span><span>(copyright) {new Date().getFullYear()} Venkat</span></footer>
   </div>
 }
