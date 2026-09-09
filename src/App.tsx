@@ -17,7 +17,7 @@ export default function App() {
     <Route path="/work" element={<Work />} />
     <Route path="/work/:slug" element={<ExperiencePage />} />
     <Route path="/projects" element={<Projects />} />
-    <Route path="/misc" element={<ListingPage title="Misc" intro="straight out of my mind, no AI generated slop" entries={misc} basePath="/misc" />} />
+    <Route path="/misc" element={<ListingPage title="Misc" intro="straight out of my mind, no AI generated slop" entries={misc} basePath="/misc" sectionTitle="Thoughts" />} />
     <Route path="/misc/:slug" element={<EntryPage entries={misc} basePath="/misc" />} />
     <Route path="*" element={<Navigate to="/" replace />} />
   </Routes></Layout>
