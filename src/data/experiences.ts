@@ -4,6 +4,7 @@ export const experiences: Experience[] = [
   {
     slug: 'lassie-ai', company: 'Lassie AI', role: 'Software Engineer', dates: 'December 2025 - Present', location: 'San Francisco, CA (Remote)',
     stack: 'Python, Django, Pydantic AI, PostgreSQL, Redis, GCP',
+    aiTools: ['Cursor', 'ClaudeCode', 'Codex'],
     highlight: 'Built PMS sync and AI insurance payment posting workflows, cutting sync time from 2 hours to minutes and improving claim matching to 98%.',
     bullets: [
       'Built and maintained the PMS sync ecosystem to fetch and synchronize patient and insurance data from on-premise Windows servers into Lassie\'s GCP infrastructure, enabling reliable data availability for downstream AI and application workflows.',

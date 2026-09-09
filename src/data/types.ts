@@ -12,4 +12,5 @@ export type Experience = {
   highlight: string
   bullets: string[]
   timeline?: TimelineItem[]
+  aiTools?: string[]
 }
