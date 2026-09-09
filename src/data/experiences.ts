@@ -22,7 +22,7 @@ export const experiences: Experience[] = [
   {
     slug: 'appsforbharat', company: 'AppsForBharat', role: 'Software Engineer - Backend and Data Platform', dates: 'January 2023 - November 2025', location: 'Bengaluru, India',
     stack: 'Go, PostgreSQL, MongoDB, Redis, AWS, GCP BigQuery, Bitbucket CI/CD',
-    highlight: 'Built event-driven backend systems, data platforms, and customer-facing integrations.',
+    highlight: 'Built backend, event-driven systems and data platforms processing 500k+ events daily across real-time, analytics, and CRM use cases.',
     bullets: [],
     timeline: [
       {
