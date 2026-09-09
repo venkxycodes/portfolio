@@ -26,9 +26,12 @@ export const experiences: Experience[] = [
     bullets: [],
     timeline: [
       {
-        role: 'SDE Intern', dates: 'January 2023 - April 2023', bullets: [
-          'Built an event property aggregator service in Go to provide centralized access to event properties across microservices, simplifying data access across the platform.',
-          'Developed a reminder feature for festive task management, implementing backend workflows and data persistence using Go and MongoDB.',
+        role: 'SDE-2', dates: 'March 2025 - November 2025', bullets: [
+          'Built an end-to-end WhatsApp customer support rating workflow, integrating customer interactions with internal systems and increasing user feedback rates from 38% to 79%.',
+          'Built the ClickToCall feature and a bidirectional call-log connector between Exotel and LeadSquared using AWS Lambda, enabling customer calls and call metadata to be synchronized between communication and CRM systems.',
+          'Optimized AWS ECS infrastructure by redesigning consumer workloads and improving resource utilization, reducing cloud infrastructure costs by $1,500 per month without performance degradations.',
+          'Refactored the API Gateway authorizer Lambda into a structured and maintainable codebase, reducing development effort and improving the maintainability of authorization logic.',
+          'Designed and implemented reverse ETL pipelines to aggregate user attributes from GCP BigQuery and ingest enriched user data into CRM platforms through scheduled batch jobs.',
         ],
       },
       {
@@ -42,12 +45,9 @@ export const experiences: Experience[] = [
         ],
       },
       {
-        role: 'SDE-2', dates: 'March 2025 - November 2025', bullets: [
-          'Built an end-to-end WhatsApp customer support rating workflow, integrating customer interactions with internal systems and increasing user feedback rates from 38% to 79%.',
-          'Built the ClickToCall feature and a bidirectional call-log connector between Exotel and LeadSquared using AWS Lambda, enabling customer calls and call metadata to be synchronized between communication and CRM systems.',
-          'Optimized AWS ECS infrastructure by redesigning consumer workloads and improving resource utilization, reducing cloud infrastructure costs by $1,500 per month without performance degradations.',
-          'Refactored the API Gateway authorizer Lambda into a structured and maintainable codebase, reducing development effort and improving the maintainability of authorization logic.',
-          'Designed and implemented reverse ETL pipelines to aggregate user attributes from GCP BigQuery and ingest enriched user data into CRM platforms through scheduled batch jobs.',
+        role: 'SDE Intern', dates: 'January 2023 - April 2023', bullets: [
+          'Built an event property aggregator service in Go to provide centralized access to event properties across microservices, simplifying data access across the platform.',
+          'Developed a reminder feature for festive task management, implementing backend workflows and data persistence using Go and MongoDB.',
         ],
       },
     ],
