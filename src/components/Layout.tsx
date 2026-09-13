@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Link to="/" className="font-semibold tracking-tight">Venkat</Link>
       <nav className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400 sm:gap-6">
         {links.map(([to, label]) => <NavLink key={to} to={to} className={({ isActive }) => isActive ? 'text-neutral-950 dark:text-white' : 'hover:text-neutral-950 dark:hover:text-white'}>{label}</NavLink>)}
-        <button aria-label="Toggle color theme" onClick={() => setDark(!dark)} className="ml-1 px-1 text-base leading-none" title="Toggle theme">🌙</button>
+        <button aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'} onClick={() => setDark(!dark)} className="ml-1 px-1 text-base leading-none" title={dark ? 'Switch to light mode' : 'Switch to dark mode'}>{dark ? '☀️' : '🌙'}</button>
       </nav>
     </header>
     <main className="mx-auto max-w-3xl px-6 pb-24 sm:px-8">{children}</main>
