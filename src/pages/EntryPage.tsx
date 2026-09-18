@@ -6,20 +6,45 @@ type BodyBlock =
   | { type: 'h2'; content: string }
   | { type: 'ul'; items: string[] }
   | { type: 'blockquote'; lines: string[] }
+  | { type: 'code'; content: string }
 
 function bodyToBlocks(body: string[]): BodyBlock[] {
   const blocks: BodyBlock[] = []
+  let codeLines: string[] | null = null
 
-  for (const paragraph of body) {
+  for (const paragraph of body.flatMap(item => item.split('\n'))) {
+    if (!paragraph.trim()) continue
+
+    if (paragraph.startsWith('```')) {
+      if (codeLines) {
+        blocks.push({ type: 'code', content: codeLines.join('\n') })
+        codeLines = null
+      } else {
+        codeLines = []
+      }
+      continue
+    }
+
+    if (codeLines) {
+      codeLines.push(paragraph)
+      continue
+    }
+
+    if (/^#{2,3}\s+/.test(paragraph)) {
+      blocks.push({ type: 'h2', content: paragraph.replace(/^#{2,3}\s+/, '') })
+      continue
+    }
+
     if (/^\d+\.\s+\S/.test(paragraph)) {
       blocks.push({ type: 'h2', content: paragraph.replace(/^\d+\.\s+/, '') })
       continue
     }
 
-    if (paragraph.startsWith('- ')) {
+    if (/^(?:- |\* )/.test(paragraph)) {
       const last = blocks[blocks.length - 1]
-      if (last?.type === 'ul') last.items.push(paragraph.slice(2))
-      else blocks.push({ type: 'ul', items: [paragraph.slice(2)] })
+      const item = paragraph.slice(2)
+      if (last?.type === 'ul') last.items.push(item)
+      else blocks.push({ type: 'ul', items: [item] })
       continue
     }
 
@@ -61,6 +86,8 @@ function renderBodyBlock(block: BodyBlock, index: number) {
           {block.lines.map((line, lineIndex) => <p key={lineIndex}>{renderInline(line)}</p>)}
         </blockquote>
       )
+    case 'code':
+      return <pre key={index}><code>{block.content}</code></pre>
     default:
       return <p key={index}>{renderInline(block.content)}</p>
   }

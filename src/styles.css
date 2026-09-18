@@ -23,3 +23,10 @@ button { color: inherit; font: inherit; }
 .prose em { font-style: italic; }
 .prose code { font-size: .9em; padding: 0.1em 0.35em; border-radius: 0.25rem; background: #f5f5f5; }
 .dark .prose code { background: #262626; }
+.prose pre { margin: 0 0 1.25rem; overflow-x: auto; padding: 1rem; border-radius: 0.4rem; background: #f5f5f5; color: #262626; font-size: .85rem; line-height: 1.6; }
+.prose pre code { padding: 0; background: transparent; }
+.dark .prose pre { background: #262626; color: #e5e5e5; }
+.prose { min-width: 0; overflow-wrap: anywhere; }
+.prose pre { max-width: 100%; white-space: pre; overscroll-behavior-inline: contain; }
+.prose pre code { display: block; min-width: max-content; }
+.prose h2 { scroll-margin-top: 2rem; }
