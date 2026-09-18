@@ -1,0 +1,4 @@
+interface:
+  display_name: Publish portfolio note
+  short_description: Turn a plain-text draft into a portfolio note
+  default_prompt: Publish this writing draft to my portfolio notes without changing my words.
