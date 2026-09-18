@@ -14,6 +14,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     localStorage.setItem('theme', dark ? 'dark' : 'light')
   }, [dark])
 
+  useEffect(() => {
+    const handlePointerMove = (event: PointerEvent) => {
+      document.documentElement.style.setProperty('--cursor-x', `${event.clientX}px`)
+      document.documentElement.style.setProperty('--cursor-y', `${event.clientY}px`)
+    }
+
+    window.addEventListener('pointermove', handlePointerMove, { passive: true })
+    return () => window.removeEventListener('pointermove', handlePointerMove)
+  }, [])
+
   return <div className="min-h-screen bg-white text-neutral-950 transition-colors dark:bg-neutral-950 dark:text-neutral-100">
     <header className="mx-auto flex max-w-3xl items-center justify-between px-6 py-7 sm:px-8">
       <Link to="/" className="font-semibold tracking-tight">Venkat</Link>
