@@ -1,6 +1,6 @@
 export const siteContent = {
   name: 'Venkatraman Kannan',
-  introduction: 'Software engineer working across backend systems, data and AI.',
+  introduction: 'AI generalist software engineer - Building systems, data platforms and agents',
   currently: 'Building things, learning things, and writing some of it down here.',
   homeNote: 'I build products. I make AI build it for me.',
   links: {
