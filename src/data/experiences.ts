@@ -2,8 +2,8 @@ import type { Experience } from './types'
 
 export const experiences: Experience[] = [
   {
-    slug: 'lassie-ai', company: 'Lassie AI', role: 'Software Engineer', dates: 'December 2025 - Present', location: 'San Francisco, CA (Remote)',
-    stack: 'Python, Django, Pydantic AI, PostgreSQL, Redis, GCP',
+    slug: 'lassie-ai', company: 'Lassie AI', role: 'Software Engineer - AI', dates: 'December 2025 - Present', location: 'San Francisco, CA (Remote)',
+    stack: 'Python, Django, Pydantic AI, PostgreSQL, Redis, GCP, React, TypeScript',
     aiTools: ['Cursor', 'ClaudeCode', 'Codex'],
     highlight: 'Built PMS sync and AI insurance payment posting workflows, cutting sync time from 2 hours to minutes and improving claim matching to 98%.',
     bullets: [
