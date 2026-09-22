@@ -13,4 +13,19 @@ export const misc: Entry[] = [
     'The only way I currently see it working is through clear boundaries. For example, 9 AM to 6 PM can be uninterrupted work time. Full focus. Build and ship. Mornings and evenings can belong to you - your health, fitness, sport, family, or whatever else matters to you.',
     'Sleep well. Eat well. Work hard. Play a sport. Spend time with people you care about. After all, we are humans. As I write this, and as you read this, a few more minutes of our lives are already gone. It is a chaotic time to work in tech. But I am slowly becoming convinced that setting boundaries and caring about other parts of your life does not necessarily make you less ambitious. Maybe ambition does not have to mean giving one thing everything you have, unless you think that is the only thing in life that matters; certainly not for me.',
   ] },
+  {
+    slug: 'agentic-system-design',
+    title: 'System design in the agentic world',
+    description: 'System design principles for building reliable AI agents.',
+    date: '22 Sep 2026',
+    body: [
+      'One thing I’m increasingly realising while learning and building AI agents is a lot of "agentic engineering" is just good software design practices.',
+      'For example, let’s take a simple agent -> subagent setup. An agent delegates two independent tasks to two subagents. They run asynchronously, possibly on different workers. The parent needs their results before deciding what to do next.',
+      'Now let’s think what can go wrong.',
+      'What if one subagent fails? What if it hangs indefinitely? What if the parent dies while the subagents are running? Where does execution state live? How do we retry without duplicating work? How does the client know what is happening without holding a request open for several minutes? How do we cancel the whole execution?',
+      'Suddenly we are talking about workers, queues, distributed state, timeouts, retries, idempotency, checkpointing, failure recovery, streaming/SSE and state machines. These are classic system design problems but in the agentic world.',
+      'Of course, building intelligent agents also requires understanding models, context, tools, memory and evals. But once an agent has to run reliably in production, strong software engineering fundamentals become more valuable.',
+      'The advice of experienced engineers continues to make sense: "Get the fundamentals right and keep the system simple stupid"',
+    ],
+  },
 ]
