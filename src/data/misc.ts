@@ -7,7 +7,7 @@ export const misc: Entry[] = [
     description: 'importance of software engineering design to build good agentic systems',
     date: '22 Sep 2026',
     body: [
-      'One thing I’m increasingly realising while learning and building AI agents is a lot of "agentic engineering" is just good software design practices.',
+      'One important thing that I’m realising while learning and building AI agents is a lot of "agentic engineering" is just good software design practices.',
       'For example, let’s take a simple agent -> subagent setup. An agent delegates two independent tasks to two subagents. They run asynchronously, possibly on different workers. The parent needs their results before deciding what to do next.',
       'Now let’s think what can go wrong.',
       'What if one subagent fails? What if it hangs indefinitely? What if the parent dies while the subagents are running? Where does execution state live? How do we retry without duplicating work? How does the client know what is happening without holding a request open for several minutes? How do we cancel the whole execution?',
