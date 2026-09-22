@@ -4,7 +4,7 @@ export const misc: Entry[] = [
   {
     slug: 'agentic-system-design',
     title: 'System design in the agentic world',
-    description: 'System design principles for building reliable AI agents.',
+    description: 'importance of software engineering design to build good agentic systems',
     date: '22 Sep 2026',
     body: [
       'One thing I’m increasingly realising while learning and building AI agents is a lot of "agentic engineering" is just good software design practices.',
