@@ -1,0 +1,4 @@
+interface:
+  display_name: Write like Venkat
+  short_description: Write in Venkat's natural first-principles voice
+  default_prompt: Write this in my voice. Keep it conversational, first-principles, concrete, and human. Preserve my reasoning instead of turning it into generic polished copy.
