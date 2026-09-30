@@ -2,6 +2,27 @@ import type { Entry } from './types'
 
 export const misc: Entry[] = [
   {
+    slug: 'use-your-timer-well',
+    title: 'Use your time(r) well',
+    description: 'On building focus, discipline, and learning to work within time constraints.',
+    date: '29 Sep 2026',
+    body: [
+      'The most amazing app on your phone/desktop that you already have, be it if you are a working professional or a student preparing for interviews, is probably the TIMER.',
+      'Think about it.',
+      'How often do we sit down to work on something, only to find ourselves checking our phones, switching tabs, taking breaks, and eventually spending hours on something that could’ve been done much earlier?',
+      'Now, what if you gave yourself a fixed amount of time to get that work done?',
+      'The idea is simple. Create a sense of urgency about completing something within a certain time range and develop the focus and discipline to give it your undivided attention while the timer runs.',
+      'In the context of interview preparation, it’s all the more important because interviews in themselves are time bound. You might be able to solve a problem given unlimited time, but can you solve the same problem in 30 minutes, while being able to think clearly under pressure?',
+      'That’s a completely different skill, and the only way to get better at it is to practise under similar constraints.',
+      'Of course, not everything needs to be time bound. Some problems deserve hours of deep thinking. But there’s a difference between spending 3 hours genuinely thinking about a problem and spending 3 hours on it while getting distracted every 10 minutes.',
+      'The point isn’t necessarily to get things done faster. It’s to train yourself to give something your complete attention for a certain period of time.',
+      'And I think that’s something we don’t consciously practise enough.',
+      'The next time you sit down to work or prepare for something, set a timer, put your phone away, and try to stay with the problem until the timer runs out.',
+      'See how much of a difference it makes.',
+      'Use your time(r) well. :))',
+    ],
+  },
+  {
     slug: 'agentic-system-design',
     title: 'System design in the agentic world',
     description: 'importance of software engineering design to build good agentic systems',
