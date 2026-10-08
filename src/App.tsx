@@ -11,7 +11,7 @@ import Projects from './pages/Projects'
 import Work from './pages/Work'
 
 export default function App() {
-  if (import.meta.env.VITE_PORTFOLIO_UI === 'terminal') return <Routes>
+  if (import.meta.env.VITE_PORTFOLIO_UI !== 'classic') return <Routes>
     <Route path="/" element={<Terminal />} />
     <Route path="/:section" element={<Terminal />} />
     <Route path="/:section/:slug" element={<Terminal />} />

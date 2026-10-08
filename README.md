@@ -21,7 +21,7 @@ Copy `.env.example` to `.env.local` and select the interface:
 VITE_PORTFOLIO_UI=terminal
 ```
 
-Use `classic` for the original UI. An unset variable defaults to classic.
+Use `classic` for the original UI. An unset variable defaults to terminal.
 Both interfaces use the same content and routes (`/`, `/work`, `/projects`, `/notes`, `/misc`, and article/experience details). There is no `/v2` route or in-page UI switch.
 
 Restart the dev server after changing the variable. For deployment, set `VITE_PORTFOLIO_UI` in the build environment and rebuild: Vite embeds the selection at build time.
