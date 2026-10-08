@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
+import Terminal from './pages/Terminal'
 import Layout from './components/Layout'
 import { misc } from './data/misc'
 import { notes } from './data/notes'
@@ -10,6 +11,12 @@ import Projects from './pages/Projects'
 import Work from './pages/Work'
 
 export default function App() {
+  if (import.meta.env.VITE_PORTFOLIO_UI !== 'classic') return <Routes>
+    <Route path="/" element={<Terminal />} />
+    <Route path="/:section" element={<Terminal />} />
+    <Route path="/:section/:slug" element={<Terminal />} />
+    <Route path="*" element={<Navigate to="/" replace />} />
+  </Routes>
   return <Layout><Routes>
     <Route path="/" element={<Home />} />
     <Route path="/notes" element={<ListingPage title="Notes" intro="Technical explanations, ideas, and things I am learning." entries={notes} basePath="/notes" />} />
