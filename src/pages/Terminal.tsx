@@ -41,7 +41,7 @@ function WorkOutput() {
   return (
     <div className="term-list">
       {experiences.map((item, i) => (
-        <Link to={`/v2/work/${item.slug}`} key={item.slug} className="term-row">
+        <Link to={`/work/${item.slug}`} key={item.slug} className="term-row">
           <span className="term-index">0{i + 1}</span>
           <div>
             <h3>
@@ -76,7 +76,7 @@ export default function Terminal() {
   const location = useLocation(),
     navigate = useNavigate(),
     { slug } = useParams()
-  const section = location.pathname.split('/')[2] || 'home'
+  const section = location.pathname.split('/')[1] || 'home'
   const [input, setInput] = useState(''),
     [history, setHistory] = useState<string[]>([]),
     [historyIndex, setHistoryIndex] = useState(-1)
@@ -137,7 +137,7 @@ export default function Terminal() {
         ? 'home'
         : command
     if (sections.includes(target)) {
-      navigate(target === 'home' ? '/v2' : `/v2/${target}`)
+      navigate(target === 'home' ? '/' : `/${target}`)
       setMessage('')
       return
     }
@@ -147,7 +147,7 @@ export default function Terminal() {
   }
   const entries = section === 'misc' ? misc : notes
   const experience = experiences.find((item) => item.slug === slug)
-  if (!sections.includes(section)) return <Navigate to="/v2" replace />
+  if (!sections.includes(section)) return <Navigate to="/" replace />
   return (
     <div className="terminal-v2">
       <div className="term-ambient" />
@@ -162,13 +162,10 @@ export default function Terminal() {
             ⌘ &nbsp; venkat — portfolio <span>×</span>
           </span>
           <span className="term-title-meta">personal workspace</span>
-          <Link to="/" className="term-classic">
-            Classic view ↗
-          </Link>
         </header>
         <div className="term-body">
           <aside className="term-sidebar">
-            <Link to="/v2" className="term-brand">
+            <Link to="/" className="term-brand">
               <span className="term-logo">v_</span>
               <div>
                 venkat<span>the personal workspace</span>
@@ -179,7 +176,7 @@ export default function Terminal() {
               {sections.map((item, i) => (
                 <NavLink
                   end={item === 'home'}
-                  to={item === 'home' ? '/v2' : `/v2/${item}`}
+                  to={item === 'home' ? '/' : `/${item}`}
                   key={item}
                   className={({ isActive }) => (isActive ? 'active' : '')}
                 >
@@ -267,7 +264,7 @@ export default function Terminal() {
                       slug ? (
                         experience ? (
                           <article className="term-detail">
-                            <Link to="/v2/work" className="term-back">
+                            <Link to="/work" className="term-back">
                               ← work/
                             </Link>
                             <h1>{experience.company}</h1>
@@ -305,7 +302,7 @@ export default function Terminal() {
                         ) : (
                           <p>
                             Experience not found.{' '}
-                            <Link to="/v2/work">Back to work →</Link>
+                            <Link to="/work">Back to work →</Link>
                           </p>
                         )
                       ) : (
@@ -345,7 +342,7 @@ export default function Terminal() {
                     ) : slug ? (
                       <EntryPage
                         entries={entries}
-                        basePath={`/v2/${section}`}
+                        basePath={`/${section}`}
                       />
                     ) : (
                       <>
@@ -363,7 +360,7 @@ export default function Terminal() {
                             <Link
                               className="term-row"
                               key={item.slug}
-                              to={`/v2/${section}/${item.slug}`}
+                              to={`/${section}/${item.slug}`}
                             >
                               <div>
                                 <h3>{item.title} ↗</h3>
@@ -382,7 +379,7 @@ export default function Terminal() {
                         <Prompt command="ls work/ --recent" />
                         <div className="term-section-title">
                           <h2>Where I’ve been building</h2>
-                          <Link to="/v2/work">view all →</Link>
+                          <Link to="/work">view all →</Link>
                         </div>
                         <WorkOutput />
                       </section>
@@ -390,13 +387,13 @@ export default function Terminal() {
                         <Prompt command="ls notes/ --recent" />
                         <div className="term-section-title">
                           <h2>Fresh from the notebook</h2>
-                          <Link to="/v2/notes">view all →</Link>
+                          <Link to="/notes">view all →</Link>
                         </div>
                         {notes.slice(0, 3).map((item) => (
                           <Link
                             className="term-row"
                             key={item.slug}
-                            to={`/v2/notes/${item.slug}`}
+                            to={`/notes/${item.slug}`}
                           >
                             <h3>{item.title}</h3>
                             <time>{item.date}</time>

@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Terminal from './pages/Terminal'
 import Layout from './components/Layout'
 import { misc } from './data/misc'
@@ -11,12 +11,11 @@ import Projects from './pages/Projects'
 import Work from './pages/Work'
 
 export default function App() {
-  const { pathname } = useLocation()
-  if (pathname === '/v2' || pathname.startsWith('/v2/')) return <Routes>
-    <Route path="/v2" element={<Terminal />} />
-    <Route path="/v2/:section" element={<Terminal />} />
-    <Route path="/v2/:section/:slug" element={<Terminal />} />
-    <Route path="/v2/*" element={<Navigate to="/v2" replace />} />
+  if (import.meta.env.VITE_PORTFOLIO_UI === 'terminal') return <Routes>
+    <Route path="/" element={<Terminal />} />
+    <Route path="/:section" element={<Terminal />} />
+    <Route path="/:section/:slug" element={<Terminal />} />
+    <Route path="*" element={<Navigate to="/" replace />} />
   </Routes>
   return <Layout><Routes>
     <Route path="/" element={<Home />} />
