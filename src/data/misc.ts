@@ -2,6 +2,27 @@ import type { Entry } from './types'
 
 export const misc: Entry[] = [
   {
+    slug: 'a-minuscule-speck-of-dust',
+    title: 'A Minuscule Speck of Dust',
+    description: 'On our insignificance in the universe, and the value of time and energy.',
+    date: '09 Oct 2026',
+    body: [
+      'All the greats and legends who have walked this planet, where are they now?',
+      'Those who killed, massacred, and ruined the lives of many in the name of God, caste, status, creed, race… where are they now?',
+      'You and I, in another 100 years, where will we be?',
+      'The observable universe is about 93 billion light-years in diameter, but the total size of the entire universe is unknown and may be infinite. We don’t know, and it is beyond our comprehension.',
+      'Earth is an unimaginably tiny speck compared to the observable universe.',
+      'Our Earth is about 12,742 kilometres in diameter. About 1.3 million Earths could fit inside the Sun. Our Milky Way galaxy alone spans roughly 100,000–125,000 light-years and contains hundreds of billions of stars.',
+      'And this is just one galaxy in the observable universe.',
+      'The Earth we live on is practically the size of an atom in the scale of known existence, and over 70% of it is covered by water.',
+      'In the tiny portion of land, in Asia, in India, in Tamil Nadu, in Coimbatore, am I a very big man?',
+      'Realising how insignificant this person is in the universal scheme of things makes me laugh, makes me think, and makes me realise that the only treasures I can cherish in this lifetime are time and energy.',
+      'How well I use them to strive for a pleasant experience of life, how meaningfully I engage in whatever I do, and how my actions contribute to a larger group of people are the only things I should truly be caring about.',
+      'I wish everyone realises this truth, and I wish to remember and realise it every moment of my life.',
+      'For life is just in moments.',
+    ],
+  },
+  {
     slug: 'use-your-timer-well',
     title: 'Use your time(r) well',
     description: 'On building focus, discipline, and learning to work within time constraints.',
