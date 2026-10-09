@@ -43,21 +43,6 @@ export const misc: Entry[] = [
       'Use your time(r) well. :))',
     ],
   },
-  {
-    slug: 'agentic-system-design',
-    title: 'System design in the agentic world',
-    description: 'importance of software engineering design to build good agentic systems',
-    date: '22 Sep 2026',
-    body: [
-      'One important thing that I’m realising while learning and building AI agents is a lot of "agentic engineering" is just good software design practices.',
-      'For example, let’s take a simple agent -> subagent setup. An agent delegates two independent tasks to two subagents. They run asynchronously, possibly on different workers. The parent needs their results before deciding what to do next.',
-      'Now let’s think what can go wrong.',
-      'What if one subagent fails? What if it hangs indefinitely? What if the parent dies while the subagents are running? Where does execution state live? How do we retry without duplicating work? How does the client know what is happening without holding a request open for several minutes? How do we cancel the whole execution?',
-      'Suddenly we are talking about workers, queues, distributed state, timeouts, retries, idempotency, checkpointing, failure recovery, streaming/SSE and state machines. These are classic system design problems but in the agentic world.',
-      'Of course, building intelligent agents also requires understanding models, context, tools, memory and evals. But once an agent has to run reliably in production, strong software engineering fundamentals become more valuable.',
-      'The advice of experienced engineers continues to make sense: "Get the fundamentals right and keep the system simple stupid"',
-    ],
-  },
   { slug: 'work-and-life', title: 'Work and life', description: 'Trying to understand ambition, boundaries, and the space outside work.', date: '08 Sep 2026', body: [
     'All things built well are built with passion and a lot of hard work. There is no second thought about it. But is hustle for everyone? I do not know. I come from an Indian middle-class family, and all of this is written from my view of how I have seen the world over the last 25 years.',
     'My dad was a Government of India employee and served for 41 years. He started as a clerk and retired as a Class I officer. He was extremely sincere at his job, took no shortcuts to reach where he did, and excelled in his service. His life meant working from 9 to 5/6 on weekdays and 9 to 1/2 on Saturdays. The rest of the weekend was for relaxing and spending time with us. Growing up, I thought this could be my life when I eventually took up a job.',
