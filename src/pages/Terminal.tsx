@@ -58,7 +58,8 @@ function WorkOutput() {
 }
 function Contact() {
   return (
-    <div className="term-socials">
+    <div className="term-contact">
+      <div className="term-socials">
       {Object.entries(siteContent.links).map(([label, href]) => (
         <a
           key={label}
@@ -69,6 +70,14 @@ function Contact() {
           {label} <span>↗</span>
         </a>
       ))}
+      </div>
+      <a
+        className="term-resume-button"
+        href={`${import.meta.env.BASE_URL}resume.pdf`}
+        download="Venkatraman-Kannan-Resume.pdf"
+      >
+        Download resume <span aria-hidden="true">↓</span>
+      </a>
     </div>
   )
 }
